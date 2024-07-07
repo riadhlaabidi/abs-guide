@@ -1,7 +1,7 @@
 #!/bin/sh 
 
 logFile=./info.log
-date=$(date)
+date=$(date -u)
 uptime=$(uptime)
 users=$(who)
 
@@ -11,3 +11,5 @@ echo -e "$out"
 
 echo -e "#########################################\n" >> $logFile
 echo -e "$out" >> $logFile
+
+exit 0
